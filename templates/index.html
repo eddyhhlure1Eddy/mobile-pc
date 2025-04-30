@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件传输站</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-exchange-alt"></i>
+                <span>文件传输站</span>
+            </div>
+            <div>
+                <p>在电脑与手机间轻松传输文件</p>
+            </div>
+        </header>
+
+        <div class="folder-selector">
+            <form id="folderForm" class="folder-form">
+                <div class="folder-input-group">
+                    <label for="folderPath">共享文件夹:</label>
+                    <input type="text" id="folderPath" name="folder_path" value="{{ folder_path }}" placeholder="输入要共享的文件夹路径 (例如: D:\Videos)">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> 设置
+                </button>
+            </form>
+        </div>
+
+        <main>
+            <div class="upload-container">
+                <div class="dropzone" id="dropzone">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <div class="dropzone-text">
+                        <div>拖拽文件至此处或点击上传</div>
+                        <p>支持批量上传各种类型的文件</p>
+                    </div>
+                    <input type="file" id="file-input" style="display: none;" multiple>
+                    <div class="upload-progress">
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="file-list" class="file-list">
+                <!-- 文件列表将通过JavaScript动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 添加文件预览模态框 -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalPreviewContent" class="modal-preview-content"></div>
+        </div>
+    </div>
+    
+    <!-- 添加移动端快捷上传按钮 -->
+    <div class="mobile-upload-btn" id="mobileUploadBtn">
+        <i class="fas fa-plus"></i>
+    </div>
+    <input type="file" id="mobile-file-input" style="display: none;" multiple>
+
+    <script src="/static/app.js"></script>
+</body>
+</html> 

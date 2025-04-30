@@ -1,0 +1,7 @@
+2025-04-21 02:26:58,342 - FileTransfer - INFO - Starting File Transfer application
+2025-04-21 02:26:58,342 - FileTransfer - INFO - Current working directory: C:\Users\Administrator\Desktop\mobile-
+2025-04-21 02:26:58,342 - FileTransfer - INFO - Templates directory exists: True
+2025-04-21 02:26:58,342 - FileTransfer - INFO - Static directory exists: True
+2025-04-21 02:26:58,342 - FileTransfer - INFO - Importing application modules
+2025-04-21 02:26:58,657 - FileTransfer - INFO - Starting the server
+2025-04-21 02:26:58,658 - asyncio - DEBUG - Using proactor: IocpProactor
